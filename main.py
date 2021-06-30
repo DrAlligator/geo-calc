@@ -1,6 +1,4 @@
-from form import Circle
-from form import Rectangle
-from form import Square
+import forms
 
 def main():
     while True:
@@ -10,7 +8,7 @@ def main():
         if menu == "a":
             try:
                 radius = float(input("Geben Sie den Radius ein: "))
-                circle = Circle(radius)
+                circle = forms.Circle(radius)
                 circle_area = circle.get_area()
                 circle_circumference = circle.get_circumference()
                 print("\n{0:<15}{1:>16,.3f}\n{2:<15}{3:>16,.3f}".format("Flächeninhalt: ", circle_area, "Umfang: ", circle_circumference))
