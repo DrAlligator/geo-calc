@@ -12,11 +12,14 @@ def main():
                 radius = input("Geben Sie den Radius ein: ")
                 radius2 = radius.replace(",", ".")
                 radius2 = float(radius2)
+
                 circle = forms.Circle(radius2)
                 circle_area = circle.get_area()
                 circle_circumference = circle.get_circumference()
+
                 print("\n{0:<15}{1:>16,.3f}\n{2:<15}{3:>16,.3f}".format("Flächeninhalt: ", circle_area, "Umfang: ", circle_circumference))
                 circle.show()
+
             except ValueError:
                 print("Nicht einmal ne Zahl kannst du eingeben...")
 
@@ -32,6 +35,7 @@ def main():
                 square_perimeter = square.get_perimeter()
 
                 print("\n{0:<15}{1:>16,.3f}\n{2:<15}{3:>16,.3f}\n{4:<15}{5:>16,.3f}".format("Flächeninhalt: ", square_area, "Diagonale: ", square_diagonal, "Umfang: ", square_perimeter))
+                square.show()
 
             except ValueError:
                 print("Nicht einmal ne Zahl kannst du eingeben...")
@@ -52,6 +56,7 @@ def main():
                 rectangle_perimeter = rectangle.get_perimeter()
 
                 print("\n{0:<15}{1:>16,.3f}\n{2:<15}{3:>16,.3f}\n{4:<15}{5:>16,.3f}".format("Flächeninhalt: ", rectangle_area, "Diagonale: ", rectangle_diagonal, "Umfang: ", rectangle_perimeter))
+                rectangle.show()
 
             except ValueError:
                 print("Nicht einmal ne Zahl kannst du eingeben...")

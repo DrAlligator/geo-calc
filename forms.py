@@ -42,6 +42,17 @@ class Square:
     def get_diagonal(self):
         return self.__square_diagonal
 
+    def show(self):
+        figure, axes = plt.subplots()
+        draw_square = plt.Rectangle((self.__square_length * 0.1, self.__square_length * 0.1), self.__square_length, self.__square_length)
+
+        axes.set_xlim((0, self.__square_length*1.2))
+        axes.set_ylim((0, self.__square_length*1.2))
+        axes.set_aspect(1)
+        axes.add_artist(draw_square)
+        plt.title("Square")
+        plt.show()
+
 class Rectangle:
     def __init__(self, rectangle_length, rectangle_width):
         self.__rectangle_length = rectangle_length
@@ -58,3 +69,14 @@ class Rectangle:
 
     def get_diagonal(self):
         return self.__rectangle_diagonal
+
+    def show(self):
+        figure, axes = plt.subplots()
+        draw_rectangle = plt.Rectangle((self.__rectangle_length * 0.1, self.__rectangle_width * 0.1), self.__rectangle_length, self.__rectangle_width)
+
+        axes.set_xlim((0, self.__rectangle_length*1.2))
+        axes.set_ylim((0, self.__rectangle_width*1.2))
+        axes.set_aspect(1)
+        axes.add_artist(draw_rectangle)
+        plt.title("Rectangle")
+        plt.show()
