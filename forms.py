@@ -1,4 +1,7 @@
 import math
+import matplotlib.pyplot as plt
+
+
 
 class Circle:
     def __init__(self, radius):
@@ -11,6 +14,17 @@ class Circle:
 
     def get_area(self):
         return self.__circle_area
+
+    def show(self):
+        figure, axes = plt.subplots()
+        draw_circle = plt.Circle((self.__radius * 1.1, self.__radius * 1.1), self.__radius)
+
+        axes.set_xlim((0, self.__radius*2.2))
+        axes.set_ylim((0, self.__radius*2.2))
+        axes.set_aspect(1)
+        axes.add_artist(draw_circle)
+        plt.title("Circle")
+        plt.show()
 
 class Square:
     def __init__(self, square_length):

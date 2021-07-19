@@ -1,6 +1,7 @@
 import forms
 
 
+
 def main():
     while True:
         print("\n{0:<10}(a)\n{1:<10}(b)\n{2:<10}(c)".format("Kreis", "Quadrat", "Rechteck"))
@@ -15,6 +16,7 @@ def main():
                 circle_area = circle.get_area()
                 circle_circumference = circle.get_circumference()
                 print("\n{0:<15}{1:>16,.3f}\n{2:<15}{3:>16,.3f}".format("Flächeninhalt: ", circle_area, "Umfang: ", circle_circumference))
+                circle.show()
             except ValueError:
                 print("Nicht einmal ne Zahl kannst du eingeben...")
 
