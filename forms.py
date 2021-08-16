@@ -11,8 +11,6 @@ class Circle:
             radius (float): Circle radius
         """
         self.__radius = radius
-        self.__circumference = self.__radius * 2 * math.pi
-        self.__circle_area = math.pi * math.pow(self.__radius, 2)
 
     def get_circumference(self):
         """get the circumference of the Circle
@@ -20,7 +18,7 @@ class Circle:
         Returns:
             float: circle circumference
         """
-        return self.__circumference
+        return self.__radius * 2 * math.pi
 
     def get_area(self):
         """get the area of the circle
@@ -28,7 +26,7 @@ class Circle:
         Returns:
             float: circle area
         """
-        return self.__circle_area
+        return math.pi * math.pow(self.__radius, 2)
 
     def show(self):
         """will show a graph with a circle with the radius given in the init
@@ -42,6 +40,7 @@ class Circle:
         axes.add_artist(draw_circle)
         plt.title("Circle")
         plt.show()
+        plt.clf()
 
 class Square:
     def __init__(self, square_length):
@@ -51,9 +50,6 @@ class Square:
             square_length (float): side length of the square
         """
         self.__square_length = square_length
-        self.__square_area = math.pow(self.__square_length, 2)
-        self.__square_perimeter = self.__square_length * 4
-        self.__square_diagonal = math.sqrt(self.__square_length * 2)
 
     def get_area(self):
         """gives the area of the square
@@ -61,7 +57,7 @@ class Square:
         Returns:
             float: square area
         """
-        return self.__square_area
+        return math.pow(self.__square_length, 2)
 
     def get_perimeter(self):
         """gives the perimeter of the square
@@ -69,7 +65,7 @@ class Square:
         Returns:
             float: perimeter of the square
         """
-        return self.__square_perimeter
+        return self.__square_length * 4
 
     def get_diagonal(self):
         """gives the diagonal of the square
@@ -77,7 +73,7 @@ class Square:
         Returns:
             float: square diagonal
         """
-        return self.__square_diagonal
+        return math.sqrt(self.__square_length * 2)
 
     def show(self):
         """will show a graph with a square of the given side length
@@ -91,6 +87,7 @@ class Square:
         axes.add_artist(draw_square)
         plt.title("Square")
         plt.show()
+        plt.clf()
 
 class Rectangle:
     def __init__(self, rectangle_length, rectangle_width):
@@ -102,9 +99,6 @@ class Rectangle:
         """
         self.__rectangle_length = rectangle_length
         self.__rectangle_width = rectangle_width
-        self.__rectangle_area = self.__rectangle_length * self.__rectangle_width
-        self.__rectangle_perimeter = self.__rectangle_length * 2 + self.__rectangle_width * 2
-        self.__rectangle_diagonal = math.sqrt(math.pow(self.__rectangle_length, 2) + math.pow(self.__rectangle_width, 2))
 
     def get_area(self):
         """returns the area of the rectangle
@@ -112,7 +106,7 @@ class Rectangle:
         Returns:
             float: rectangle area
         """
-        return self.__rectangle_area
+        return self.__rectangle_length * self.__rectangle_width
 
     def get_perimeter(self):
         """returns the perimeter of the rectangle
@@ -120,7 +114,7 @@ class Rectangle:
         Returns:
             float: rectangle perimeter
         """
-        return self.__rectangle_perimeter
+        return self.__rectangle_length * 2 + self.__rectangle_width * 2
 
     def get_diagonal(self):
         """returns the diagonal of the rectangle
@@ -128,7 +122,7 @@ class Rectangle:
         Returns:
             float: rectangel diagonal
         """
-        return self.__rectangle_diagonal
+        return math.sqrt(math.pow(self.__rectangle_length, 2) + math.pow(self.__rectangle_width, 2))
 
     def show(self):
         """will show will show a graph with a rectangle of the given sides
@@ -142,3 +136,4 @@ class Rectangle:
         axes.add_artist(draw_rectangle)
         plt.title("Rectangle")
         plt.show()
+        plt.clf()
