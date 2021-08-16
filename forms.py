@@ -40,7 +40,6 @@ class Circle:
         axes.add_artist(draw_circle)
         plt.title("Circle")
         plt.show()
-        plt.clf()
 
 class Square:
     def __init__(self, square_length):
@@ -87,7 +86,7 @@ class Square:
         axes.add_artist(draw_square)
         plt.title("Square")
         plt.show()
-        plt.clf()
+
 
 class Rectangle:
     def __init__(self, rectangle_length, rectangle_width):
@@ -136,4 +135,3 @@ class Rectangle:
         axes.add_artist(draw_rectangle)
         plt.title("Rectangle")
         plt.show()
-        plt.clf()
